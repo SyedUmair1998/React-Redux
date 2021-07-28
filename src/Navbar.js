@@ -4,14 +4,14 @@ const Home = () =>{
     let dispatch = useDispatch();
     const update = () =>{
         dispatch({
-            type:"UPDATE_DATA",
-            name:'Kaka'
+            type:"ADD_DATA",
+            age:10
         });
     }
     console.log(state);
     return(
         <div>
-            <h1>{state.name}</h1>
+            <h1>{state.age}</h1>
             <button onClick={update}>Update</button>
         </div>
     )

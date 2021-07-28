@@ -1,25 +1,28 @@
 const INITIAL_STATE = {
-    // user:{
-    //     name:'Umair',
-    //     email:'syedumairh1998@gmail.com'
-    // },
-    // car:{
-    //     name:'Corolla',
-    //     model:2007
-    // }
-    name:'Umair'
+//    student : {
+//        dept:"CS"
+//    },
+    name:'Umair',
+    age:"10"
 
 }
+
 const reducer = (state = INITIAL_STATE,action) => {
-    console.log(state);
    switch(action.type){
        case "UPDATE_DATA":
-           
-    return({
+            
+       
+        return({
         ...state,
-        name:action.name
+        age:action.name
+        
     });
-    
+    case "ADD_DATA":
+           return({
+        ...state,
+        age:action.age+1
+        
+    });
     default:
         return state;
 
